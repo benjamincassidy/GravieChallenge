@@ -1,5 +1,8 @@
 # Gravie Software Engineer Challenge
 
+**NOTE**
+See Setup instructions below.
+
 ## Instructions
 
 After completing the challenge below, please send us an email with the location of your repository. If
@@ -14,7 +17,7 @@ your repository is private, be sure to add us as collaborators so we can view yo
 For this challenge you will consume the Giant Bomb API to create an application that will allow a
 user to search games and "rent" them. The application should consist of at least two unique pages
 (`search` and `checkout`). Your view should display the game thumbnail and title, and the rest is up
-to you. You can use any language and or framework you'd like. 
+to you. You can use any language and or framework you'd like.
 
 ![Giant Bomb](https://upload.wikimedia.org/wikipedia/en/4/4b/Giant_Bomb_logo.png)
 
@@ -25,12 +28,30 @@ Note: You'll most likely need to use the social media technique for logging in (
 ### Resources
 
 You can find the quickstart guide
-[here](https://www.giantbomb.com/forums/api-developers-3017/quick-start-guide-to-using-the-api-1427959/). 
+[here](https://www.giantbomb.com/forums/api-developers-3017/quick-start-guide-to-using-the-api-1427959/).
 
-You can find a full list of API features [here](https://www.giantbomb.com/api/documentation). 
+You can find a full list of API features [here](https://www.giantbomb.com/api/documentation).
 
 ### Questions
 
 Don't hesitate to reach out with any questions. Remember we are more focused on seeing your
 development process than checking off a list of requirements, so be sure you are able to speak to your
 code and your thoughts behind it.
+
+## Setup
+
+This project uses [XCodeGen](https://github.com/yonaskolb/XcodeGen) to create the Xcode project and [SwiftGen](https://github.com/SwiftGen/SwiftGen) to manage
+resources in a typesafe way. [Mint](https://github.com/yonaskolb/Mint) is used to install and run these command line tools. After cloning the project, Mint
+will need to be installed locally if it's not already available:
+
+```
+brew install mint
+```
+
+Once Mint is installed successfully, the bootstrap script can be run to generate the project ad the resource files.
+
+```
+./Scripts/bootstrap.sh
+```
+
+Next open the project in Xcode and run as usual.

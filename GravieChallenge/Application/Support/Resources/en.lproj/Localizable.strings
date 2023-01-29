@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  GravieChallenge
+
+  Created by Benjamin Cassidy on 1/28/23.
+  
+*/
+
+// Common
+"Cancel" = "Cancel";
+"OK" = "OK";
+
+// Content View
+"ContentView.Tabs.Search" = "Search";
+"ContentView.Tabs.Checkout" = "Checkout";
+
+// Search View
+"SearchView.SearchForGame" = "Search for a game";
+
+
+// Cart View
+"CartView.CartEmptyMessage" = "Add some games to your cart!";
+"CartView.Checkout" = "Checkout";
+"CartView.CheckoutConfirmationMessage" = "Do you want to rent the games in your cart?";
+"CartView.Success" = "Success";
+"CartView.SuccessMessage" = "Your games have been rented. Enjoy!";

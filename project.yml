@@ -1,0 +1,35 @@
+name: GravieChallenge
+options:
+  bundleIdPrefix: bio.cassidy
+  deploymentTarget:
+    iOS: "16.2"
+  groupSortPosition: top
+
+settings:
+  MARKETING_VERSION: 1.0.0
+
+schemes:
+  GravieChallenge:
+    build:
+      targets:
+        GravieChallenge: all
+
+targets:
+  GravieChallenge:
+    type: application
+    platform: iOS
+    settings:
+      INFOPLIST_FILE: GravieChallenge/Application/Support/Info.plist
+    sources:
+     - path: GravieChallenge
+       excludes:
+         - "Application/Support/swiftgen.yml"
+    preBuildScripts:
+      - name: SwiftGen
+        script: mint run swiftgen config run --config "GravieChallenge/Application/Support/swiftgen.yml"
+        inputFiles:
+          - $(SRCROOT)/GravieChallenge/Application/Support/Resources/en.lprog/Localizable.strings
+          - $(SRCROOT)/GravieChallenge/Application/Support/Assets.xcassets
+        outputFiles:
+          - $(SRCROOT)/GravieChallenge/Application/Support/Generated/Assets.swift
+          - $(SRCROOT)/GravieChallenge/Application/Support/Generated/Localizations.swift
